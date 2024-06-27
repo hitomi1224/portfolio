@@ -43,7 +43,7 @@ layout: 'container'
     grid-column: 1 / 8;
     grid-row: 8 / 10;
     border-top: 2px dashed #000000;
-
+    font-weight: bold;
 }
 
 .container-bottom:hover{
@@ -73,5 +73,9 @@ layout: 'container'
     height: 680px;
     border-left: 2px dashed #000000;
     background: linear-gradient(45deg, #AFEEEE,#5F9EA0,#B0C4DE);
+}
+
+.page-title{
+    padding-left: 3%;
 }
 </style>

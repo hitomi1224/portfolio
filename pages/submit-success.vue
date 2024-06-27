@@ -26,14 +26,25 @@ export default {
 }
 
 h1{
+    margin-top: 10%;
     text-align: center;
 }
 
 p{
     text-align: center;
+    font-weight: bold;
 }
 
 button{
     margin-left: 47%;
+    margin-top: 5%;
+    padding: 5px;
+    width: 5%;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #5F9EA0;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
 }
 </style>

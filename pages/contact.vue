@@ -85,6 +85,8 @@
 </template>
 
 <script>
+import { db, firebase } from '@/plugins/firebase';
+
 export default {
     layout: 'container',
     data() {
@@ -99,9 +101,30 @@ export default {
         content: ''
         }
     },
-    methods:{
-        submit() {
-            this.$router.push('/submit-success')
+    methods: {
+    async submit() {
+        try {
+        // フォームデータを作成
+        const formData = {
+            companyName: this.companyName,
+            name: this.name,
+            address: this.address,
+            phone: this.phone,
+            website: this.website,
+            email: this.email,
+            deadline: this.deadline,
+            content: this.content,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            };
+
+        // データをFirestoreに保存
+            await db.collection('inquiries').add(formData);
+
+        // 送信完了ページにリダイレクト
+            this.$router.push('/submit-success');
+        } catch (error) {
+            console.error('送信中にエラーが発生しました:', error);
+        }
         }
     }
 }
@@ -112,6 +135,16 @@ export default {
     background: linear-gradient(45deg, #AFEEEE,#B0C4DE,#5F9EA0);
     color: #FFFFFF;
     height: 950px;
+}
+
+.page-title{
+    position: absolute;
+    top: -8%;
+    left: 67%;
+    width: 10%;
+    height: 35%;
+    transform: rotate(90deg);
+    font-size: 30px;
 }
 
 .contact-title{
@@ -142,7 +175,7 @@ th{
     padding-left: 30%;
     padding-top: 8%;
     align-items: center;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 p{
@@ -173,6 +206,11 @@ button{
     margin-left: 45%;
     width: 10%;
     height: 5%;
-
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #5F9EA0;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
 }
 </style>
