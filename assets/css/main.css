@@ -1,0 +1,64 @@
+/* layout*/
+body {
+    font-family:"Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main{
+    display: flex;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    width: 19.7%;
+    height: 680px;
+    border-right: 2px dashed #000000;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 680px;
+    margin-left: 20%;
+}
+
+.title{
+    margin-left: 10%;
+}
+
+.nav{
+    margin-top: 50px;
+    margin-left: 15px;
+    width: 30%;
+}
+
+.nav-item{
+    padding-bottom: 30px;
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-item-link{
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-item-link:hover{
+    text-decoration: underline;
+}
+
+.page-title{
+    position: absolute;
+    top: -5%;
+    left: 70%;
+    width: 10%;
+    height: 35%;
+    transform: rotate(90deg);
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+
