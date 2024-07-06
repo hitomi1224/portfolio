@@ -6,7 +6,9 @@
         <PageTitleProfile />
     </div>
     <div class="container-bottom">
-        <p class="profile-message">「楽しく学び、吸収して、昇華させる」を大切に<br>未経験からエンジニアになるため毎日奮闘中・・・</p>
+        <p class="profile-message">目を惹くデザインを取り入れたフロントエンジニアを目指しています。<br>
+        こつこつと制作したり問題解決したりすることが得意で、新しい物好きです。<br>
+        今後の目標は、社会のニーズに合わせられるように常にアンテナを張って制作していくことです。</p>
 
         <p class="profile-skill">保有スキル　HTML , CSS , JavaScript , Nuxt.js , Firebase , Github</p>
     </div>
@@ -20,9 +22,11 @@ export default {
 </script>
 
 <style scoped>
+/* PC */
+@media screen and (min-width: 1025px) {
 .container{
-    background: linear-gradient(45deg, #AFEEEE,#5F9EA0,#B0C4DE);
-    padding: 150px 0 0 170px;
+    background: linear-gradient(45deg, #90d6d8,#a3bee4,#8ddbdb);
+    padding: 100px 0 0 170px;
 }
 
 .page-title{
@@ -53,6 +57,72 @@ export default {
     color: #FFFFFF;
     font-size: 18px;
 }
+}
 
 
+/*モバイル（スマホ）*/
+@media screen and (max-width: 530px) {
+.container{
+    background: linear-gradient(45deg, #90d6d8,#a3bee4,#8ddbdb);
+    width: 100%;
+    height: 100vh;
+}
+
+.page-title{
+    position: absolute;
+    top: -5%;
+    left: 45%;
+    width: 10%;
+    height: 35%;
+    transform: rotate(90deg);
+    font-size: 20px;
+}
+
+.container-upper{
+    padding: 5% 3% 5% 5%;
+    width: 90%;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.container-bottom{
+    padding: 10% 5%;
+    width: 90%;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+}
+
+/*モバイル（ipad）*/
+@media (min-width:530px) and (max-width:1024px) {
+.container{
+    background: linear-gradient(45deg, #90d6d8,#a3bee4,#8ddbdb);
+    width: 100%;
+    height: 100vh;
+}
+
+.page-title{
+    position: absolute;
+    top: -5%;
+    left: 65%;
+    width: 10%;
+    height: 35%;
+    transform: rotate(90deg);
+    font-size: 20px;
+}
+
+.container-upper{
+    padding: 5% 3% 5% 5%;
+    width: 90%;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.container-bottom{
+    padding: 0 5%;
+    width: 90%;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+}
 </style>
